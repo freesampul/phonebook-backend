@@ -6,5 +6,15 @@
     "http": "^0.0.1-security",
     "mongoose": "^8.15.1",
     "morgan": "^1.10.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "server": "json-server -p 3000 db.json"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
   }
 }
