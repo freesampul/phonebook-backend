@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Filter = ({ filter, setFilter }) => {
   const handleFilterChange = (event) => {
     console.log(event.target.value)

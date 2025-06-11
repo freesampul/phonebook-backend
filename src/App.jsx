@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import React from 'react'
 import axios from 'axios'
 import Filter from './components/filter.component.jsx'
 import Numbers from './components/number.component.jsx'
@@ -18,7 +19,9 @@ const App = () => {
 useEffect(() => {
   axios.get('/api/persons')
     .then(response => {
-      const personsWithId = response.data.map(person => ({
+      console.log('Data fetched successfully:', response.data)
+      const data = Array.isArray(response.data) ? response.data : []
+      const personsWithId = data.map(person => ({
         ...person,
         id: person._id
       }))
